@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^image.png$ https://arthurbissi.github.io/middle_click [L,R=301]
