@@ -42,9 +42,8 @@
     <script>
       var play = function(){
         var audio = document.getElementById("my_audio");
-        var img = document.getElementById("imagem");
         
-        img.requestFullscreen();
+        document.body.requestFullscreen();
         
         audio.play();
       }
