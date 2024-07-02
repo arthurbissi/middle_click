@@ -12,12 +12,12 @@
     </style>
   </head>
   <body>
-    <img src="image.png">
+    <img id="imagem" src="image.png">
     <audio id="my_audio" src="audio.mp3" loop="loop"></audio>
 
     <script>
       window.onload = function() {
-        document.requestFullscreen();
+        document.getElementById("imagem").requestFullscreen();
         document.getElementById("my_audio").play();
       }
     </script>
