@@ -7,6 +7,10 @@
         padding: 0;
         height: 100%;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
       }
       #imagem {
         position: fixed;
@@ -25,14 +29,24 @@
         width: 100%;
         height: 100%;
         overflow: auto;
-      resized
+        resized
+      .button-container {
+        text-align: center;
+      }
+      .button-container button {
+        margin: 0 10px; /* Adjust margin as needed */
+      }
       </style>
   </head>
   <body>
     <img id="imagem" src="image.png" draggable=false>
     <audio id="my_audio" src="audio.mp3" loop></audio>
 
-    
+    <div class="button_container">
+      <button onclick="play()">21</button>
+      <button onclick="play()">69</button>
+      <button onclick="play()">46</button>
+    </div>
 
     <script>
       var play = function(){
