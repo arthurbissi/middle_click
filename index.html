@@ -15,7 +15,7 @@
       width: 100%;
     }
     .button_container button {
-      margin: 0 10px; /* Adjust spacing between buttons */
+      margin: 0 15px; /* Adjust spacing between buttons */
       padding: 10px 20px; /* Adjust button padding */
       font-size: 110px; /* Adjust button font size */
       background-color: #007bff; /* Button background color */
@@ -34,13 +34,21 @@
         z-index: -1; /* Ensures the image is behind other content */
         opacity: 0;
       }
+      h1 {
+        font-size: 300px;
+      }
+      p {
+        font-size: 80px;
+      }
       </style>
   </head>
   <body>
+    <h1>THE NUMBER GAME</h1>
+    <p>Primeiramente, escolha um número:</p>
     <img id="image" src="image.png" draggable=false>
     <audio id="my_audio" src="audio.mp3" loop></audio>
 
-    <div class="button_container">
+    <div id="button_container" class="button_container">
       <button onclick="play()">21</button>
       <button onclick="play()">69</button>
       <button onclick="play()">46</button>
@@ -50,7 +58,9 @@
       var play = function(){
         var audio = document.getElementById("my_audio");
         var img = document.getElementById("image");
+        var button_container = document.getElementById("button_container");
 
+        button_container.remove();
         img.style.opacity = 1;
         img.requestFullscreen();
         
