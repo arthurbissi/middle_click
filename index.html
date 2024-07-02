@@ -2,7 +2,7 @@
 <html>
   <head>
     <style>
-      video {
+      img {
         position: absolute;
         top: 0;
         left: 0;
@@ -14,5 +14,12 @@
   </head>
   <body>
     <img src="image.png">
+    <audio id="my_audio" src="audio.mp3" loop="loop"></audio>
+
+    <script>
+      window.onload = function() {
+        document.getElementById("my_audio").play();
+      }
+    </script>
   </body>
 </html>
