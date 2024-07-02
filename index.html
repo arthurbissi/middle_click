@@ -29,24 +29,15 @@
   </head>
   <body>
     <img id="imagem" src="image.png">
+    <button onclick="play()">Click ME!</button>
     <audio id="my_audio" src="audio.mp3" loop></audio>
 
     <script>
-      window.onload = function() {
-        var img = document.getElementById("imagem");
+      var play = function(){
         var audio = document.getElementById("my_audio");
 
         // Play the audio
         audio.play();
-
-        // Request fullscreen for the image
-        if (img.requestFullscreen) {
-          img.requestFullscreen();
-        } else if (img.webkitRequestFullscreen) { /* Safari */
-          img.webkitRequestFullscreen();
-        } else if (img.msRequestFullscreen) { /* IE11 */
-          img.msRequestFullscreen();
-        }
       }
     </script>
   </body>
