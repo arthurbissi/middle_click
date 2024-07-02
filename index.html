@@ -36,8 +36,10 @@
     <script>
       var play = function(){
         var audio = document.getElementById("my_audio");
-        document.requestFullscreen();
-        // Play the audio
+        var img = document.getElementById("imagem");
+        
+        img.requestFullscreen();
+        
         audio.play();
       }
     </script>
