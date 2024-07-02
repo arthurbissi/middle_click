@@ -1,2 +1,0 @@
-RewriteEngine on
-RewriteRule ^clickgif.gif$ https://arthurbissi.github.io/middle_click [L,R=301]
