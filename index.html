@@ -8,13 +8,9 @@
         height: 100%;
         overflow: hidden;
     }
-    body {
-      background-image: url("image.png");
-      background-size: cover;
-    }
       .button_container {
       position: absolute;
-      bottom: 20px; /* Adjust as needed */
+      top: 50%; /* Adjust as needed */
       text-align: center;
       width: 100%;
     }
@@ -27,10 +23,23 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      min-width: 100px;
+      min-height: 50px;
     }
+      img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image covers the entire viewport */
+        z-index: 1; /* Ensures the image is behind other content */
+        opacity: 0;
+      }
       </style>
   </head>
   <body>
+    <img src="image.png" draggable=false>
     <audio id="my_audio" src="audio.mp3" loop></audio>
 
     <div class="button_container">
