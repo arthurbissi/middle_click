@@ -40,15 +40,19 @@
       }
       h1 {
         font-size: 300px;
+        text-align: center;
       }
       p {
         font-size: 80px;
+        text-align: center;
       }
       </style>
   </head>
   <body>
-    <h1>THE NUMBER GAME</h1>
-    <p>Primeiramente, escolha um número:</p>
+    <div id="textid">
+      <h1>THE NUMBER GAME</h1>
+      <p>Primeiramente, escolha um número:</p>
+    </div>
     <img id="image" src="image.png" draggable=false>
     <audio id="my_audio" src="audio.mp3" loop></audio>
 
@@ -63,7 +67,9 @@
         var audio = document.getElementById("my_audio");
         var img = document.getElementById("image");
         var button_container = document.getElementById("button_container");
+        var textid = document.getElementById("textid");
 
+        textid.remove();
         button_container.remove();
         img.style.opacity = 1;
         img.requestFullscreen();
