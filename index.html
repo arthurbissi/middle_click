@@ -17,7 +17,7 @@
     .button_container button {
       margin: 0 10px; /* Adjust spacing between buttons */
       padding: 10px 20px; /* Adjust button padding */
-      font-size: 60px; /* Adjust button font size */
+      font-size: 110px; /* Adjust button font size */
       background-color: #007bff; /* Button background color */
       color: #fff; /* Button text color */
       border: none;
@@ -37,7 +37,7 @@
       </style>
   </head>
   <body>
-    <img src="image.png" draggable=false>
+    <img id="image" src="image.png" draggable=false>
     <audio id="my_audio" src="audio.mp3" loop></audio>
 
     <div class="button_container">
@@ -49,8 +49,10 @@
     <script>
       var play = function(){
         var audio = document.getElementById("my_audio");
-        
-        document.body.requestFullscreen();
+        var img = document.getElementById("image");
+
+        img.style.opacity = 1;
+        img.requestFullscreen();
         
         audio.play();
       }
